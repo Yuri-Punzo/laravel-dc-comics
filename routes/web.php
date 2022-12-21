@@ -38,7 +38,3 @@ Route::get('/', function () {
 })->name('comics');
 
 Route::resource('admin/comics', ComicController::class);
-
-/* use App\Http\Controllers\PhotoController;
- 
-Route::resource('photos', PhotoController::class); */
