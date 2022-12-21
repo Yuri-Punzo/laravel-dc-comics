@@ -15,7 +15,6 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //dd(Post::all());
         $comics = Comic::orderByDesc('id')->get();
         return view('admin.comics.index', compact('comics'));
     }

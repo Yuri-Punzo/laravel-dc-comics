@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('admin/comics', [PostController::class, 'index'])->name('comics.index');
+Route::get('admin/comics', [ComicController::class, 'index'])->name('comics.index');
