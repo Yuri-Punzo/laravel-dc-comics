@@ -19,6 +19,7 @@ creare il seeder per la tabella comics utilizzando il file in allegato.
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
+use App\Models\Comic;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +33,10 @@ use App\Http\Controllers\ComicController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $comics = Comic::all();
+    return view('welcome', compact('comics'));
+})->name('comics');
+
 Route::resource('admin/comics', ComicController::class);
 
 /* use App\Http\Controllers\PhotoController;
