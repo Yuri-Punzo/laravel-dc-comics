@@ -5,9 +5,9 @@
 <section class="comics py-5">
     <div class="container">
         <div class="heading d-flex justify-content-between">
-            <h2>Pasta</h2>
+            <h2>Comics</h2>
             <div>
-                <a href="" class="btn btn-primary">Add Pasta</a>
+                <a href="" class="btn btn-primary">Add Comic</a>
             </div>
         </div>
 
@@ -31,7 +31,7 @@
                     <tr class="table-primary">
                         <td scope="row">{{$comic->id}}</td>
                         <td>{{$comic->title}}</td>
-                        <td><img width="80" src="{{$comic->src}}" alt="{{$comic->title}}"></td>
+                        <td><img width="80" src="{{$comic->thumb}}" alt="{{$comic->title}}"></td>
                         <td class="d-flex flex-column gap-2">
                             <a href='' class="btn btn-primary view">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
