@@ -6,7 +6,6 @@
     <h1 class="py-5">Create a new Product</h1>
     <form action="{{route('comics.store')}}" method="post" class="card p-3">
         @csrf
-
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" name="title" id="title" class="form-control" placeholder="" aria-describedby="titleHlper">
@@ -17,7 +16,6 @@
             <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="thumbHlper">
             <small id="thumbHlper" class="text-muted">Add the product thumb here</small>
         </div>
-
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea class="form-control" name="description" id="description" rows="4"></textarea>

@@ -1,27 +1,20 @@
 <!-- 
-CONSEGNA:
-Create un nuovo progetto Laravel.
-composer create-project laravel/laravel laravel-comics
-cd laravel-comics
-composer require pacificdev/laravel_9_preset
-php artisan preset:ui bootstrap
+--CONSEGNA DAY 1--
+Oggi create un nuovo progetto Laravel 9 per gestire un archivio di fumetti.
 
-// il seguente comando blocca il terminale (funziona solo su bash e non su powershell)
-npm i && npm run dev
+Milestone 1
+Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller.
 
-// apri un nuovo terminale
-php artisan serve
-Nota: per uscire dal terminale quando é bloccato dai processi npm run dev o php artisan serve   premete ctrl+c o ctrl+z
-Concentratevi sul layout:
-create un file di layout in cui inserire la struttura comune di tutte le pagine del sito web (tag head, tag body, ...)
-ed includendo header e footer tramite due partials.
-
-Create poi una rotta per visualizzare la lista di tutti i fumetti recuperati da un file inserito nella cartella config e abbellite il tutto sfruttando Sass.
+Milestone 2
+Iniziate a definire le prime operazioni CRUD con le relative view:
+index()
+show()
+create()
+store()
 
 Bonus:
-Create più pagine che estendono lo stesso layout
+creare il seeder per la tabella comics utilizzando il file in allegato.
  -->
-
 @extends("layouts.app")
 
 @section("content")
