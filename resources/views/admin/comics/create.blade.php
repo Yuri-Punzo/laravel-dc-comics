@@ -32,6 +32,17 @@
             <input type="text" name="price" id="price" class="form-control" placeholder="" aria-describedby="priceHlper">
             <small id="priceHlper" class="text-muted">Add the product price here</small>
         </div>
+        <div class="mb-3">
+            <label for="sale_date" class="form-label">Sale Date</label>
+            <input type="text" name="sale_date" id="sale_date" class="form-control" placeholder="" aria-describedby="sale_dateHlper">
+            <small id="sale_dateHlper" class="text-muted">Add the product sale date here</small>
+        </div>
+        <div class="mb-3">
+            <label for="type" class="form-label">Type</label>
+            <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="typeHlper">
+            <small id="typeHlper" class="text-muted">Add the product type here</small>
+        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>
