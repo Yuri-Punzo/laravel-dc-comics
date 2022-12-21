@@ -1,1 +1,185 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+#site_header {
+    font-size: 12px;
+    font-weight: bold;
+
+    .logo {
+        img {
+            max-width: 100%;
+            height: 80px;
+            padding: 1rem;
+        }
+    }
+
+    .col {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .active {
+        color: #0282f9;
+        border-bottom: 4px solid #0282f9;
+        padding: 29px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        margin: 0 8px;
+
+        &:hover {
+            color: #0282f9;
+        }
+    }
+
+    .jumbotron {
+        background-image: url(../img/jumbotron.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        height: 400px;
+    }
+}
+
+.current_page {
+    color: #0282f9;
+    border-bottom: 4px solid #0282f9;
+    padding: 29px 0;
+}
+
+#site_main {
+    background-color: black;
+    color: white;
+
+    .load_more_btn {
+        background-color: #0282f9;
+        padding: 0.5rem 2.5rem;
+        font-weight: bold;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .current_series_tag {
+        background-color: #0282f9;
+        padding: 0 1rem;
+        font-weight: bold;
+        font-size: 25px;
+        position: absolute;
+        top: -67px;
+        left: -12px;
+    }
+
+    img {
+        height: 185px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .no_style {
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+.banner_blue {
+    background-color: #0282f9;
+    height: 80px;
+}
+
+#site_footer_top {
+    background-color: #0282f9;
+    color: white;
+    font-size: 12px;
+
+
+    .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+
+        img {
+            height: 55px;
+            padding: 0.5rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        #svg_img {
+            width: 60px;
+        }
+    }
+}
+
+#site_footer_center {
+    background-image: url(../img/footer-bg.jpg);
+
+    .my_col {
+        padding: 2rem 1rem;
+
+        h2 {
+            color: white;
+        }
+
+        a {
+            color: gray;
+            font-size: 8;
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+                color: #0282f9;
+            }
+        }
+    }
+
+    .col_dc_bg {
+        background-image: url(../img/dc-logo-bg.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+#site_footer_bottom {
+    background-color: #303030;
+    font-size: 14px;
+
+
+    .my_button {
+        padding: 0.5rem 1rem;
+        border: 2px solid #0282fa;
+        color: white;
+
+        &:hover {
+            background-color: #0282fa;
+            cursor: pointer;
+        }
+    }
+
+    .my_col {
+        display: flex;
+        align-items: center;
+    }
+
+    .my_col_end {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+            padding: 1rem 0.5rem;
+        }
+    }
+
+    .follow_us {
+        color: #0282fa;
+        font-weight: bold;
+    }
+}
