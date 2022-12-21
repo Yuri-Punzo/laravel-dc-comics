@@ -34,7 +34,7 @@ use App\Http\Controllers\ComicController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('admin/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::resource('admin/comics', ComicController::class);
 
 /* use App\Http\Controllers\PhotoController;
  
