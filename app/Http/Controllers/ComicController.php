@@ -83,8 +83,7 @@ class ComicController extends Controller
      */
     public function update(UpdateComicRequest $request, Comic $comic)
     {
-
-        $data = [
+        /* $data = [
             'title' => $request['title'],
             'description' => $request['description'],
             'thumb' => $request['thumb'],
@@ -94,8 +93,16 @@ class ComicController extends Controller
             'type' => $request['type'],
 
         ];
+        $comic->update($data); */
 
-        $comic->update($data);
+        $comic->title = $request['title'];
+        $comic->description = $request['description'];
+        $comic->thumb = $request['thumb'];
+        $comic->price = $request['price'];
+        $comic->series = $request['series'];
+        $comic->sale_date = $request['sale_date'];
+        $comic->type = $request['type'];
+        $comic->update();
 
         return to_route('comics.index')->with('message', "$comic->title update successfully");
     }
