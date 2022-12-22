@@ -4,7 +4,7 @@
 
 <div class="container py-5">
     <div class="d-flex gap-4">
-        <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
+        <img style="height: 300px;" src="{{$comic->thumb}}" alt="{{$comic->title}}">
         <div class="details">
             <h1>{{$comic->title}}</h1>
             <p>{{$comic->description}}</p>

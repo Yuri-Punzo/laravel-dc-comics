@@ -71,7 +71,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -83,7 +83,21 @@ class ComicController extends Controller
      */
     public function update(UpdateComicRequest $request, Comic $comic)
     {
-        //
+
+        $data = [
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'thumb' => $request['thumb'],
+            'price' => $request['price'],
+            'series' => $request['series'],
+            'sale_date' => $request['sale_date'],
+            'type' => $request['type'],
+
+        ];
+
+        $comic->update($data);
+
+        return to_route('comics.index')->with('message', "$comic->title update successfully");
     }
 
     /**
@@ -94,6 +108,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return to_route('comics.index')->with('message', "$comic->title deleted successfully");
     }
 }
