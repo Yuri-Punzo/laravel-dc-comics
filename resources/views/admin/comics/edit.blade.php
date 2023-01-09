@@ -10,12 +10,12 @@
         @method('PUT')
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" name="title" id="title" class="form-control" placeholder="" aria-describedby="titleHlper" value="{{old('title', $comic->title)}}">
+            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="" aria-describedby="titleHlper" value="{{old('title', $comic->title)}}">
             <small id="titleHlper" class="text-muted">Add the product title here</small>
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">Product Image</label>
-            <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="thumbHlper" value="{{old('thumb', $comic->thumb)}}">
+            <input type="text" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror" placeholder="" aria-describedby="thumbHlper" value="{{old('thumb', $comic->thumb)}}">
             <small id=" thumbHlper" class="text-muted">Add the product thumb here</small>
         </div>
         <div class="mb-3">
@@ -39,7 +39,7 @@
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="typeHlper" value="{{old('type', $comic->type)}}">
+            <input type="text" name="type" id="type" class="form-control @error('type') is-invalid @enderror" placeholder="" aria-describedby="typeHlper" value="{{old('type', $comic->type)}}">
             <small id="typeHlper" class="text-muted">Add the product type here</small>
         </div>
 
