@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateComicRequest extends FormRequest
 {
@@ -24,7 +25,26 @@ class UpdateComicRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => [
+                'required',
+                Rule::unique('comics')->ignore($this->comic->id),
+                'min:5',
+                'max:100'
+            ],
+            'thumb' => 'nullable|max:255',
+            'type' => 'nullable|max:20',
+            'description' => 'nullable'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Non è possibile eliminare questo campo. Il titolo é obbligatorio',
+            'title.min' => 'Il titolo deve essere almeno :min caratteri',
+            'title.max' => 'Il titolo deve essere almeno :max caratteri',
+            'thumb.max' => "L'immagine puó essere massimo :max caratteri",
+            'type.max' => 'Il tipo di prodotto puó essere massimo :max caratteri'
         ];
     }
 }
