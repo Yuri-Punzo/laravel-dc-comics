@@ -24,7 +24,7 @@ class StoreComicRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:products,title|min:5|max:100',
+            'title' => 'required|unique:comics,title|min:5|max:100',
             'thumb' => 'nullable|max:255',
             'type' => 'nullable|max:20',
             'description' => 'nullable'
