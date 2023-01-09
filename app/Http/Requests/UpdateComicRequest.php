@@ -31,9 +31,12 @@ class UpdateComicRequest extends FormRequest
                 'min:5',
                 'max:100'
             ],
+            'description' => 'nullable',
             'thumb' => 'nullable|max:255',
-            'type' => 'nullable|max:20',
-            'description' => 'nullable'
+            'price' => 'nullable',
+            'series' => 'nullable',
+            'sale_date' => 'nullable',
+            'type' => 'nullable|max:20'
         ];
     }
 

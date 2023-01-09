@@ -38,7 +38,7 @@ class ComicController extends Controller
     public function store(StoreComicRequest $request)
     {
         //dd($request->all());
-        $comic = new Comic();
+        /* $comic = new Comic();
         $comic->title = $request['title'];
         $comic->description = $request['description'];
         $comic->thumb = $request['thumb'];
@@ -46,9 +46,12 @@ class ComicController extends Controller
         $comic->series = $request['series'];
         $comic->sale_date = $request['sale_date'];
         $comic->type = $request['type'];
-        $comic->save();
+        $comic->save(); */
 
-        return to_route('comics.index');
+        $val_data = $request->validated();
+        $comic = Comic::create($val_data);
+
+        return to_route('comics.index')->with('message', "$comic->title added successfully");
     }
 
     /**
@@ -95,14 +98,17 @@ class ComicController extends Controller
         ];
         $comic->update($data); */
 
-        $comic->title = $request['title'];
+        /* $comic->title = $request['title'];
         $comic->description = $request['description'];
         $comic->thumb = $request['thumb'];
         $comic->price = $request['price'];
         $comic->series = $request['series'];
         $comic->sale_date = $request['sale_date'];
         $comic->type = $request['type'];
-        $comic->update();
+        $comic->update(); */
+
+        $val_data = $request->validated();
+        $comic->update($val_data);
 
         return to_route('comics.index')->with('message', "$comic->title update successfully");
     }

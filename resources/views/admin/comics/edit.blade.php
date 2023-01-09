@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">Product Image</label>
-            <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="thumbHlper" value="{{old('thumb', $comic->thumb)}}"">
+            <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="thumbHlper" value="{{old('thumb', $comic->thumb)}}">
             <small id=" thumbHlper" class="text-muted">Add the product thumb here</small>
         </div>
         <div class="mb-3">
